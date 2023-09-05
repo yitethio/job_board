@@ -10,8 +10,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+      <Route path="/" element={<Compregister/>} />
         <Route path="/intro" element={<Intro />} />
-        <Route path="/Pages/Comp_register" element={<Compregister/>} />
+       
         <Route paath="/intro2" element={<intro_2/>}/>
       </Routes>
     </BrowserRouter>
