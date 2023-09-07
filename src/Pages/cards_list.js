@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Card, CardHeader,  Avatar, CardContent, Typography, Grid } from '@mui/material';
+import { Card, CardHeader,  Avatar, CardContent, Typography, Grid, colors } from '@mui/material';
 import { deepOrange } from '@mui/material/colors';
+import { Button } from '@mui/material';
 
 function DataDisplay() {
   const [data, setData] = useState([]);
@@ -39,9 +40,12 @@ function DataDisplay() {
               <Typography style={{ color: '#000', fontFamily: 'Inter', fontSize: '17px', fontWeight: '600', lineHeight: 'normal' }}>Vacancy Available:</Typography>
               <Typography style={{ color: '#000', fontFamily: 'Inter', fontSize: '17px', fontWeight: '400', lineHeight: 'normal' }}>{item.vacancy}</Typography>
               <Typography style={{ color: '#000', fontFamily: 'Inter', fontSize: '17px', fontWeight: '600', lineHeight: 'normal' }}>Job Type:</Typography>
-              <Typography style={{ color: '#000', fontFamily: 'Inter', fontSize: '17px', fontStyle: 'normal', fontWeight: '600', lineHeight: 'normal' }}>{item.Job_type}</Typography>
+              <Typography style={{ color: '#000', fontFamily: 'Inter', fontSize: '17px', fontWeight: '400', lineHeight: 'normal' }}>{item.Job_type}</Typography>
             </CardContent>
           </Card>
+          <Button variant="contained"  style={{width: '100px', height: '39.319px',background: '#654141'}}>
+        Readmore
+      </Button>
         </Grid>
       ))}
     </Grid>
