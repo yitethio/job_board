@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Card, CardHeader, Container, Avatar, CardContent, Typography, Grid } from '@mui/material';
+import { Card, CardHeader,  Avatar, CardContent, Typography, Grid } from '@mui/material';
 import { deepOrange } from '@mui/material/colors';
 
 function DataDisplay() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // Make an API request to fetch data
-    axios.get('your_api_endpoint_here')
+    
+    axios.get('https://64fa30874098a7f2fc15737d.mockapi.io/cards')
       .then((response) => {
-        // Assuming the API returns an array of data
+       
         setData(response.data);
       })
       .catch((error) => {
