@@ -1,7 +1,8 @@
-import { Container, Typography, Button, IconButton, Card, CardHeader, CardContent } from '@mui/material';
+import { Container, Typography, Button, IconButton, TextField, InputAdornment  } from '@mui/material';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import DataDisplay from './cards_list';
 import FilterListIcon from '@mui/icons-material/FilterList';
+import SearchIcon from '@mui/icons-material/Search';
 import * as React from 'react';
 import axios from 'axios'; // Import Axios
 
@@ -97,17 +98,17 @@ function Home() {
           <Button
             variant="contained"
             style={{
-              width: '175px',
-              height: '63.472px',
-              color: '#021114',
+              width: '75px',
+              height: '34px',
+              color: 'white',
               backgroundColor: '#F3C300',
-              fontWeight: '700',
-              fontSize: '22px',
+              fontWeight: '100',
+              fontSize: '12px',
               fontFamily: 'Noto Serif',
               marginLeft: '199px',
             }}
           >
-            Sign up
+            Signup
           </Button>
         </Container>
       </div>
@@ -117,6 +118,19 @@ function Home() {
       >
         <FilterListIcon />
       </IconButton>
+      <TextField
+        label="Search"
+        variant="outlined"
+        size="small"
+        style={{marginTop:'45px',marginLeft:'1300px'}}
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <SearchIcon />
+            </InputAdornment>
+          ),
+        }}
+        />
       <div style={{ marginTop: '40px', marginLeft: '70px' }}>
         <DataDisplay data={selectedJobType ? filteredData : data} />
       </div>
