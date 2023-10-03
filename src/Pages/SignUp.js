@@ -1,6 +1,10 @@
+/* eslint-disable no-restricted-globals */
 import React, { useState } from 'react';
 import { Container, Typography, TextField, Button, FormControl, InputLabel, InputAdornment, IconButton, OutlinedInput } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
+
+import axios from 'axios';
 
 function SignUp() {
   const [formData, setFormData] = useState({
@@ -9,6 +13,7 @@ function SignUp() {
     password: '',
     showPassword: false,
   });
+  const navigate = useNavigate(); // Use useNavigate instead of useHistory
 
   const handleChange = (prop) => (event) => {
     setFormData({ ...formData, [prop]: event.target.value });
@@ -22,11 +27,27 @@ function SignUp() {
     event.preventDefault();
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Handle form submission here, e.g., send data to your API
-    console.log(formData);
-    // Reset the form
+    
+    try {
+      // Simulate a registration request with mock data
+      const response = await axios.post('/api/register', formData);
+
+      if (response.status === 200) {
+        // Registration was successful, you can now handle the mocked JWT token
+        console.log('Registration successful');
+        console.log('JWT Token:', response.data.token);
+        navigate('/home');
+        // You can also redirect or navigate to a protected route
+      } else {
+        // Handle registration error
+        console.error('Registration failed');
+      }
+    } catch (error) {
+      // Handle network error
+      console.error('Network error', error);
+    }
     setFormData({
       name: '',
       email: '',
@@ -36,7 +57,8 @@ function SignUp() {
   };
 
   return (
-    <Container maxWidth="sm">
+    <div >
+      <Container maxWidth="sm" >
       <Typography variant="h4" align="center" gutterBottom>
         Sign Up
       </Typography>
@@ -88,6 +110,7 @@ function SignUp() {
         </Button>
       </form>
     </Container>
+    </div>
   );
 }
 
