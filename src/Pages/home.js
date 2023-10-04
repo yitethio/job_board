@@ -1,10 +1,11 @@
-import { Container, Typography, Button, IconButton, TextField, InputAdornment  } from '@mui/material';
+import React from 'react';
+import { Container, Typography, Button, IconButton, TextField, InputAdornment } from '@mui/material';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import DataDisplay from './cards_list';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import SearchIcon from '@mui/icons-material/Search';
-import * as React from 'react';
 import axios from 'axios'; // Import Axios
+import Header from './header';
 
 function Home() {
   const [selectedJobType, setSelectedJobType] = React.useState(null);
@@ -39,81 +40,14 @@ function Home() {
 
   return (
     <>
-      <div style={{ backgroundColor: '#021C2C' }}>
-        <Container
-          style={{
-            width: '100%',
-            height: '77px',
-            maxWidth: '100%',
-            margin: '0 auto',
-            display: 'flex',
-            alignItems: 'center',
-            flexDirection: 'row',
-            alignContent: 'space-between',
-          }}
-        >
-          <Typography
-            style={{
-              color: '#FFF',
-              fontFamily: 'Noto Serif',
-              fontSize: '32px',
-              fontStyle: 'normal',
-              fontWeight: 400,
-              lineHeight: 'normal',
-            }}
-          >
-            Afro Jobs
-          </Typography>
-          <div style={{ marginLeft: '700px' }}>
-            <Button
-              style={{
-                color: 'white',
-                fontFamily: 'Noto Serif',
-                fontSize: '19px',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-              }}
-              size="large"
-            >
-              Home
-            </Button>
-            <Button
-              style={{
-                color: 'white',
-                fontFamily: 'Noto Serif',
-                fontSize: '19px',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-              }}
-              size="large"
-            >
-              ABOUT US
-            </Button>
-          </div>
-          <IconButton style={{ color: 'white', marginLeft: '75px' }}>
-            <NotificationsIcon />
-          </IconButton>
-          <Button
-            variant="contained"
-            style={{
-              width: '75px',
-              height: '34px',
-              color: 'white',
-              backgroundColor: '#F3C300',
-              fontWeight: '100',
-              fontSize: '12px',
-              fontFamily: 'Noto Serif',
-              marginLeft: '199px',
-            }}
-          >
-            Signup
-          </Button>
-        </Container>
-      </div>
+      <Header/>
       <IconButton
-        style={{ marginLeft: '30px', marginTop: '20px', fontSize: '32px', color: selectedJobType ? 'blue' : 'inherit' }}
+        style={{
+          marginLeft: '20px', // Adjust spacing for smaller screens
+          marginTop: '20px',
+          fontSize: '32px',
+          color: selectedJobType ? 'blue' : 'inherit',
+        }}
         onClick={selectedJobType ? clearFilter : () => handleFilterClick('temporary onsite')}
       >
         <FilterListIcon />
@@ -122,7 +56,7 @@ function Home() {
         label="Search"
         variant="outlined"
         size="small"
-        style={{marginTop:'45px',marginLeft:'1300px'}}
+        style={{ marginTop: '20px', width: '100%', maxWidth: '400px', marginLeft: 'auto', marginRight: 'auto' }} // Center and adjust width
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -130,8 +64,8 @@ function Home() {
             </InputAdornment>
           ),
         }}
-        />
-      <div style={{ marginTop: '40px', marginLeft: '70px' }}>
+      />
+      <div style={{ marginTop: '20px' }}>
         <DataDisplay data={selectedJobType ? filteredData : data} />
       </div>
     </>

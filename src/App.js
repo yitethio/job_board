@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-import SignUp from './Pages/SignUp';
-import Home from './Pages/home';
-import ApplicationForm from './Pages/ApplicationForm';
 import Intro from './Pages/Intro';
+import  Home  from './Pages/home';
+import ApplicationForm from './Pages/ApplicationForm';
+import Signup_c from './Pages/SignUp_compony';
+import Comp from './Pages/comp';
+
+
 
 
 
@@ -14,10 +16,12 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-      <Route path="/" element={<SignUp/>} />
+      <Route path="/" element={<Signup_c/>} />
         <Route path="/intro" element={<Intro />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Home/>} />
         <Route path="/ApplicationForm" element={<ApplicationForm/>}/>
+        <Route path='/comp' element={<Comp/>}/>
+
       </Routes>
     </BrowserRouter>
   );
