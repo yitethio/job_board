@@ -1,6 +1,6 @@
 /* ApplyForm.css */
 body {
-    background-image: url('../images/background2.png'); /* Add your background image URL here */
+    background-image: url('../../images/background2.png'); /* Add your background image URL here */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
