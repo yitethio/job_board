@@ -1,7 +1,7 @@
 /* RegistrationForm.css */
 
 .registration-form-container {
-    background-image: url('../images/background2.png'); /* Replace with the actual path to your image */
+    background-image: url('../../images/background2.png'); /* Replace with the actual path to your image */
     background-size: cover; /* Ensure the image covers the entire container */
     background-repeat: no-repeat; /* Prevent image repetition */
     background-attachment: fixed; /* Keep the image fixed in the background */
