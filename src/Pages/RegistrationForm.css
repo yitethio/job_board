@@ -1,0 +1,59 @@
+/* RegistrationForm.css */
+
+.registration-form-container {
+    background-image: url('../images/background2.png'); /* Replace with the actual path to your image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-attachment: fixed; /* Keep the image fixed in the background */
+    min-height: 100vh; /* Ensure the form covers the entire viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .registration-form {
+    max-width: 400px; /* Adjust the width as needed */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: 021C2C; /* Add a semi-transparent white background to the form */
+  }
+  
+  .registration-form label {
+    display: block; /* Display labels as blocks for one below the other */
+    margin-bottom: 10px; /* Add spacing between label and input field */
+    font-weight: bold; /* Make labels bold for better visibility */
+    color: #fff;
+  }
+  
+  .registration-form input,
+  .registration-form select {
+    width: 100%; /* Make input fields take up full width */
+    padding: 10px; /* Add padding for better spacing */
+    border: none; /* Remove input borders */
+    border-bottom: 1px solid #ccc; /* Add a bottom border for a line effect */
+    outline: none; /* Remove input focus outline */
+    background: transparent; /* Make input fields transparent */
+  }
+  
+  .registration-form select {
+    appearance: none; /* Remove default appearance for select dropdown */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+  }
+  
+  .registration-form button {
+    width: 100%; /* Make the button take up full width */
+    padding: 10px; /* Add padding for better spacing */
+    background-color: #DBBF03; /* Change button background color */
+    color: black; /* Change button text color */
+    border: none;
+border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add a smooth transition on hover */
+  }
+  
+  .registration-form button:hover {
+    background-color: #0056b3; /* Change button background color on hover */
+  }
+  
