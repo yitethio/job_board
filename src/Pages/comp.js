@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Container, Typography } from '@mui/material';
 import Header from './header';
+import Footer from './Footer'
 
 // Import your two components here
 import RecentPostComponent from './recent_post';
@@ -58,7 +59,10 @@ function Comp_p() {
 
       {/* Conditional rendering based on button click */}
       {showRecentPost ? <RecentPostComponent /> : <NewJobPostComponent />}
+      <Footer />
+
     </>
+
   );
 }
 

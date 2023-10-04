@@ -1,6 +1,7 @@
 import { Typography, Container, Button } from '@mui/material';
 import React from 'react';
 import Intro_img from '../images/linkedin-sales-solutions-Xh_MFNzpEDw-unsplash.jpg';
+import Welcome from './welcoming_page';
 
 function Intro() {
   return (
@@ -49,7 +50,8 @@ function Intro() {
             ABOUT US
           </Button>
         </div>
-        <Button
+       <a  href="/welcom" style={{ textDecoration: 'none' }}>
+       <Button
           variant="contained"
           style={{
             width: '75px',
@@ -64,6 +66,7 @@ function Intro() {
         >
           Signup
         </Button>
+       </a>
       </Container>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px' }}>
         <Typography

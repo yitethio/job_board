@@ -5,6 +5,9 @@ import  Home  from './Pages/home';
 import ApplicationForm from './Pages/ApplicationForm';
 import Signup_c from './Pages/SignUp_compony';
 import Comp from './Pages/comp';
+import Welcome from './Pages/welcoming_page';
+import Register from './Pages/registration/register'
+
 
 
 
@@ -21,7 +24,8 @@ function App() {
         <Route path="/home" element={<Home/>} />
         <Route path="/ApplicationForm" element={<ApplicationForm/>}/>
         <Route path='/comp' element={<Comp/>}/>
-
+        <Route path='/welcoming_page' element={<Welcome/>}/>
+        <Route path='/register' element={<Register/>}/>
       </Routes>
     </BrowserRouter>
   );

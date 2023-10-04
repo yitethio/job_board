@@ -51,7 +51,8 @@ function Header() {
             <NotificationsIcon />
           </IconButton>
         </div>
-        <Button
+        <a  href="/welcom" style={{ textDecoration: 'none' }}>
+       <Button
           variant="contained"
           style={{
             width: '75px',
@@ -59,12 +60,14 @@ function Header() {
             color: 'white',
             backgroundColor: '#F3C300',
             fontWeight: '100',
-            fontSize: '12px', // Adjust font size for smaller screens
+            fontSize: '12px',
             fontFamily: 'Noto Serif',
+            marginRight: '20px',
           }}
         >
           Signup
         </Button>
+       </a>
       </Container>
     </div>
   );
