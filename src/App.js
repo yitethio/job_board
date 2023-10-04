@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Intro from './Pages/Intro';
 import  Home  from './Pages/home';
-import ApplicationForm from './Pages/Application/ApplicationForm';
+import ApplicationForm from './Pages/Application/apply';
 import Signup_c from './Pages/SignUp_compony';
 import Comp from './Pages/comp';
 import Welcome from './Pages/welcoming_page';

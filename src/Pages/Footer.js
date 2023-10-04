@@ -40,7 +40,7 @@ function Footer() {
           width: '4px',
           height: '30px', 
           marginTop: '45px',
-          marginRight: '355px', // Adjust the margin to align "About Us" perfectly
+         
         }} />
         <a>
           <Typography style=
