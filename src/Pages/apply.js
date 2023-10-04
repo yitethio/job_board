@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import '../Pages/ApplyForm.css';
 
 const ApplyForm = () => {
@@ -20,7 +21,7 @@ const ApplyForm = () => {
     setFormData({ ...formData, cv: cvFile });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Create a FormData object to send form data including the CV file
@@ -31,29 +32,25 @@ const ApplyForm = () => {
     applyFormData.append('address', formData.address);
     applyFormData.append('cv', formData.cv);
 
-    // Send a POST request to your API (replace with the actual API endpoint)
-    fetch('YOUR_API_ENDPOINT', {
-      method: 'POST',
-      body: applyFormData,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        // Handle the successful response data here
-        console.log('Application submitted:', data);
+    try {
+      // Send a POST request to JSONPlaceholder (a fake REST API)
+      const response = await axios.post('https://jsonplaceholder.typicode.com/posts', applyFormData);
 
-        // Optionally, you can reset the form after successful submission
-        setFormData({
-          name: '',
-          email: '',
-          password: '',
-          address: '',
-          cv: null,
-        });
-      })
-      .catch((error) => {
-        // Handle any errors that occurred during the fetch and submission process
-        console.error('Application error:', error);
+      // Handle the successful response data here
+      console.log('Application submitted:', response.data);
+
+      // Optionally, you can reset the form after successful submission
+      setFormData({
+        name: '',
+        email: '',
+        password: '',
+        address: '',
+        cv: null,
       });
+    } catch (error) {
+      // Handle any errors that occurred during the submission process
+      console.error('Application error:', error);
+    }
   };
 
   return (
