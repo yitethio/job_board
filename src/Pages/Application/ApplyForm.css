@@ -1,23 +1,15 @@
 /* ApplyForm.css */
-body {
-    background-image: url('../../images/background2.png'); /* Add your background image URL here */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+
 
 .apply-form-container {
-    min-height: 100vh;
+    background-image: url('../../images/background2.png'); /* Replace with the actual path to your image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-attachment: fixed; /* Keep the image fixed in the background */
+    min-height: 100vh; /* Ensure the form covers the entire viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
-max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    background-color: #021C2C; /* Transparent white background */
 }
 
 .apply-form label {
