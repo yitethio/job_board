@@ -50,7 +50,7 @@ function Intro() {
             ABOUT US
           </Button>
         </div>
-       <a  href="/welcom" style={{ textDecoration: 'none' }}>
+       <a  href="/welcome" style={{ textDecoration: 'none' }}>
        <Button
           variant="contained"
           style={{

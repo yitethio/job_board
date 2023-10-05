@@ -57,7 +57,7 @@ function Welcome() {
   return (
     <div style={divStyle}>
       <div style={containerStyle}>
-        <a href="/page1" style={linkStyle}>
+        <a href="/register" style={linkStyle}>
           <div style={clickableContainerStyle}>
             <div style={imageContainerStyle}>
               <img
