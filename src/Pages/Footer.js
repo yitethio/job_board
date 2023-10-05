@@ -1,60 +1,80 @@
 import { Divider, Typography } from '@mui/material';
 import React from 'react';
 
+const footerStyles = {
+  backgroundColor: '#021C2C',
+  width: '100%',
+  height: '158px',
+  display: 'flex',
+  alignItems: 'center',
+  position: 'fixed',
+  bottom: 0, // Stick to the bottom of the viewport
+  left: 0,
+};
+
 function Footer() {
   return (
-    <>
-      <div style={{ backgroundColor: '#021C2C', width: '100%', height: '158px', display: 'flex', alignItems: 'center' }}>
-       
-          <Typography style={{
-            color: '#F3C300',
+    <div style={footerStyles}>
+      <Typography
+        style={{
+          color: '#F3C300',
+          fontFamily: 'Noto Serif',
+          fontSize: '39px',
+          fontStyle: 'normal',
+          fontWeight: '400',
+          marginLeft: '45px',
+        }}
+      >
+        Afro-Jobs
+      </Typography>
+      <Divider
+        style={{
+          backgroundColor: '#DBBF03',
+          width: '4px',
+          height: '30px',
+          marginLeft: '355px',
+          marginBottom: '45px',
+        }}
+      />
+      <a>
+        <Typography
+          style={{
+            color: '#FFF',
             fontFamily: 'Noto Serif',
-            fontSize: '39px',
+            fontSize: '22px',
             fontStyle: 'normal',
             fontWeight: '400',
-            marginLeft: '45px'
-          }}>
-            Afro-Jobs
-          </Typography>
-        
-        <Divider style={{
+            marginBottom: '45px',
+            marginLeft: '10px',
+          }}
+        >
+          Home
+        </Typography>
+      </a>
+      <Divider
+        style={{
           backgroundColor: '#DBBF03',
           width: '4px',
-          height: '30px', 
-          marginLeft: '355px',
-          marginBottom: '45px'
-        }} />
-        <a>
-          <Typography style=
-          
-        {{ color: '#FFF', fontFamily: 'Noto Serif',
-        fontSize: '22px',
-        fontStyle: 'normal',
-        fontWeight: '400',
-        marginBottom: '45px',
-        marginLeft: '10px'
-        }}>Home</Typography>
-        </a>
-        <Divider style={{
-          backgroundColor: '#DBBF03',
-          width: '4px',
-          height: '30px', 
+          height: '30px',
           marginTop: '45px',
-         
-        }} />
-        <a>
-          <Typography style=
-          
-        {{ color: '#FFF', fontFamily: 'Noto Serif',
-        fontSize: '22px',
-        fontStyle: 'normal',
-        fontWeight: '400',
-        marginTop: '45px',
-        marginLeft: '10px'
-        }}>About Us</Typography>
-        </a>
-      </div>
-    </>
+        }}
+      />
+      <a>
+        <Typography
+          style={{
+            color: '#FFF',
+            fontFamily: 'Noto Serif',
+            fontSize: '22px',
+            fontStyle: 'normal',
+            fontWeight: '400',
+            marginTop: '45px',
+            marginLeft: '10px',
+          }}
+        >
+          About Us
+        </Typography>
+      </a>
+    </div>
   );
 }
 

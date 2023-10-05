@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../Application/ApplyForm.css';
+import Button from '@mui/material/Button';
+
 
 const ApplyForm = () => {
   const [formData, setFormData] = useState({
@@ -76,7 +78,23 @@ const ApplyForm = () => {
           Upload CV:
           <input type="file" name="cv" onChange={handleCvChange} required />
         </label>
-        <button type="submit">Apply</button>
+        <a href="/home">
+        <Button
+          variant="contained"
+          style={{
+            width: '56px',
+            height: '34px',
+            color: 'white',
+            backgroundColor: '#F3C300',
+            fontWeight: '100',
+            fontSize: '12px',
+            fontFamily: 'Noto Serif',
+            marginRight: '20px',
+          }}
+        >
+          Apply
+        </Button>
+        </a>
       </form>
     </div>
   );

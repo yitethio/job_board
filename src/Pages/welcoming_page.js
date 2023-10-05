@@ -80,7 +80,7 @@ function Welcome() {
             </div>
           </div>
         </a>
-        <a href="/page2" style={linkStyle}>
+        <a href="/apply" style={linkStyle}>
           <div style={clickableContainerStyle}>
             <div style={imageContainerStyle}>
               <img

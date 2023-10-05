@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../registration/RegistrationForm.css';
+import Button from '@mui/material/Button';
+
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -56,7 +58,23 @@ const RegistrationForm = () => {
           {/* Add more categories as needed */}
         </select>
       </label>
-      <button type="submit">submit</button>
+      <a href="/comp" >
+      <Button
+          variant="contained"
+          style={{
+            width: '105px',
+            height: '34px',
+            color: 'white',
+            backgroundColor: '#F3C300',
+            fontWeight: '100',
+            fontSize: '12px',
+            fontFamily: 'Noto Serif',
+            marginRight: '20px',
+          }}
+        >
+          Signup
+        </Button>
+      </a>
     </form>
     </div>
   );
