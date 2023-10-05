@@ -55,6 +55,7 @@ function Welcome() {
   };
 
   return (
+    
     <div style={divStyle}>
       <div style={containerStyle}>
         <a href="/page1" style={linkStyle}>
