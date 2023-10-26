@@ -1,0 +1,77 @@
+/* ApplyForm.css */
+
+
+.apply-form-container {
+    background-image: url('../../images/background2.png'); /* Replace with the actual path to your image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-attachment: fixed; /* Keep the image fixed in the background */
+    min-height: 100vh; /* Ensure the form covers the entire viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.apply-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Style the input fields */
+.apply-form input[type="text"],
+.apply-form input[type="email"],
+.apply-form input[type="password"],
+.apply-form input[type="file"] {
+    width: 100%;
+    padding: 5px 0; /* Adjust the padding to control the height of the input line */
+    border: none; /* Remove borders */
+    border-bottom: 1px solid white; /* Add a bottom border */
+    background-color: transparent; /* Remove background color */
+    color: white;
+    outline: none; /* Remove the default input focus outline */
+}
+/* Style the CV input to be a taller box */
+.apply-form input[type="file"] {
+    width: 100%; /* Make it a wide box */
+    padding: 15px; /* Adjust the padding as needed */
+    border: 1px solid white; /* Add a border to the wide box */
+    border-radius: 5px;
+    height: 100px; /* Add more height here */
+    position: relative; /* Make the position relative */
+    overflow: hidden; /* Hide the overflow content */
+}
+
+/* Style the pseudo-element to act as a label */
+.apply-form input[type="file"]::before {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding for button appearance */
+    color: black; /* Button text color */
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; /* Center the label horizontally and vertically */
+    text-align: center; /* Center the text inside the label */
+    pointer-events: none; /* Make sure the label doesn't intercept clicks */
+}
+
+
+
+/* Style the submit button */
+.apply-form button[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #DBBF03;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.apply-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}

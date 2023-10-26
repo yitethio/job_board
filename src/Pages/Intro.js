@@ -1,70 +1,12 @@
 import { Typography, Container, Button } from '@mui/material';
 import React from 'react';
 import Intro_img from '../images/linkedin-sales-solutions-Xh_MFNzpEDw-unsplash.jpg';
+import Header from './header';
 
 function Intro() {
   return (
     <div style={{ backgroundColor: '#021C2C', width: '100%', height: 'auto' }}>
-      <Container
-        style={{
-          padding: '20px 0',
-          display: 'flex',
-          alignItems: 'center',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-        }}
-      >
-        <Typography
-          style={{
-            color: '#FFF',
-            fontFamily: 'Noto Serif',
-            fontSize: '24px',
-            fontWeight: 400,
-            marginLeft: '20px',
-          }}
-        >
-          AfroJobs
-        </Typography>
-        <div style={{ display: 'flex', gap: '20px' }}>
-          <Button
-            style={{
-              color: 'white',
-              fontFamily: 'Noto Serif',
-              fontSize: '16px',
-              fontWeight: 400,
-            }}
-            size="large"
-          >
-            Home
-          </Button>
-          <Button
-            style={{
-              color: 'white',
-              fontFamily: 'Noto Serif',
-              fontSize: '16px',
-              fontWeight: 400,
-            }}
-            size="large"
-          >
-            ABOUT US
-          </Button>
-        </div>
-        <Button
-          variant="contained"
-          style={{
-            width: '75px',
-            height: '34px',
-            color: 'white',
-            backgroundColor: '#F3C300',
-            fontWeight: '100',
-            fontSize: '12px',
-            fontFamily: 'Noto Serif',
-            marginRight: '20px',
-          }}
-        >
-          Signup
-        </Button>
-      </Container>
+      <Header/>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px' }}>
         <Typography
           style={{

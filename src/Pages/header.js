@@ -25,6 +25,7 @@ function Header() {
           Afro Jobs
         </Typography>
         <div style={{ display: 'flex', gap: '20px' }}> {/* Use flex and add gap for buttons */}
+          <a href="/" >
           <Button
             style={{
               color: 'white',
@@ -36,6 +37,7 @@ function Header() {
           >
             Home
           </Button>
+          </a>
           <Button
             style={{
               color: 'white',
@@ -51,7 +53,8 @@ function Header() {
             <NotificationsIcon />
           </IconButton>
         </div>
-        <Button
+        <a  href="/welcome" style={{ textDecoration: 'none' }}>
+       <Button
           variant="contained"
           style={{
             width: '75px',
@@ -59,12 +62,14 @@ function Header() {
             color: 'white',
             backgroundColor: '#F3C300',
             fontWeight: '100',
-            fontSize: '12px', // Adjust font size for smaller screens
+            fontSize: '12px',
             fontFamily: 'Noto Serif',
+            marginRight: '20px',
           }}
         >
           Signup
         </Button>
+       </a>
       </Container>
     </div>
   );
